@@ -1,0 +1,18 @@
+Name,Smiles,N Params,sN Params
+threonine,NC(C(O)C)C([O-])=O,12.69,0.6
+leucine,NC(CC(C)C)C([O-])=O,14.01,0.52
+dimethylamine,[H]N(C)C,17.12,0.5
+ethylenediamine,NCCN,13.28,0.58
+tert-butylamine,[H]N(C(C)(C)C)[H],10.48,0.65
+n-propylamine,CCCN,13.33,0.56
+ammonia,[H]N([H])[H],9.48,0.59
+aniline,NC1=CC=CC=C1,12.99,0.73
+4-methoxyaniline,NC1=CC=C(OC)C=C1,14.28,0.68
+4-pyrrolidinopyridine,C1(N2CCCC2)=CC=NC=C1,12.39,0.66
+glutamine,NC(CCC(N)=O)C([O-])=O,13.45,0.54
+benzylamine,NCC1=CC=CC=C1,13.44,0.55
+methyl glycinate,NCC(OC)=O,12.08,0.6
+isopropylamine,[H]N(C(C)C)[H],12.0,0.56
+4-aminopyridine,NC1=CC=NC=C1,12.19,0.66
+phenylalanine,NC(CC1=CC=CC=C1)C([O-])=O,14.12,0.53
+asparagine,NC(CC(N)=O)C([O-])=O,13.03,0.53
