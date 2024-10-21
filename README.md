@@ -1,0 +1,2 @@
+# MayrScale
+Calculates Mayr Nucleophilicity
