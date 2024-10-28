@@ -1,0 +1,153 @@
+﻿ID;Name;IUPAC;Sum Formula;Smiles;Solvent;N Params;E Params;sN Params;Quality;Reference;charge
+536;threonine (anionic, in water);2-amino-3-hydroxybutanoate;C4H8NO3;NC(C(O)C)C([O-])=O;water;12,69;;0,6;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+532;leucine (anionic, in water);2-amino-4-methylpentanoate;C6H12NO2;NC(CC(C)C)C([O-])=O;water;14,01;;0,52;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+484;dimethylamine (in water);;C2H7N;[H]N(C)C;water;17,12;;0,5;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+493;ethylenediamine (in water);ethane-1,2-diamine;C2H8N2;NCCN;water;13,28;;0,58;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+483;tert-butylamine (in water);2-methylpropan-2-amine;C4H11N;[H]N(C(C)(C)C)[H];water;10,48;;0,65;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+108;n-propylamine (in water);Propan-1-amine;C3H9N;CCCN;water;13,33;;0,56;***;"J. Am. Chem. Soc. 2003, 125, 286-295
+https://dx.doi.org/10.1021/ja021010y";0
+479;ammonia (in water);;H3N;[H]N([H])[H];water;9,48;;0,59;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+498;aniline (in water);;C6H7N;NC1=CC=CC=C1;water;12,99;;0,73;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+662;2-methyl-imidazole (in water);;;;water;9,45;;0,54;***;"Org. Biomol. Chem. 2010, 8, 1929-1935
+https://dx.doi.org/10.1039/c000965b";0
+502;4-methoxyaniline (in water);p-anisidine;C7H9NO;NC1=CC=C(OC)C=C1;water;14,28;;0,68;***;"ChemPlusChem 2015, 80, 1673-1679
+https://dx.doi.org/10.1002/cplu.201500246";0
+457;4-pyrrolidinopyridine (in H2O);;C9H12N2;C1(N2CCCC2)=CC=NC=C1;water;12,39;;0,66;***;"Chem. Eur. J. 2007, 13, 336-345
+https://dx.doi.org/10.1002/chem.200600941";0
+538;glutamine (anionic, in water);2,5-diamino-5-oxopentanoate;C5H9N2O3;NC(CCC(N)=O)C([O-])=O;water;13,45;;0,54;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+873;theophylline anion (in water);;;;water;10,06;;0,71;***;"Chem. Eur. J. 2012, 18, 127-137
+https://dx.doi.org/10.1002/chem.201102411";0
+880;1-methyl uracil anion (in water);;;;water;8,54;;0,77;***;"Chem. Eur. J. 2012, 18, 127-137
+https://dx.doi.org/10.1002/chem.201102411";0
+496;benzylamine (in water);phenylmethanamine;C7H9N;NCC1=CC=CC=C1;water;13,44;;0,55;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+506;methyl glycinate (in water);;C3H7NO2;NCC(OC)=O;water;12,08;;0,6;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+482;isopropylamine (in water);propan-2-amine;C3H9N;[H]N(C(C)C)[H];water;12;;0,56;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+449;4-aminopyridine (in H2O);pyridin-4-amine;C5H6N2;NC1=CC=NC=C1;water;12,19;;0,66;***;"Chem. Eur. J. 2007, 13, 336-345
+https://dx.doi.org/10.1002/chem.200600941";0
+537;asparagine (anionic, in water);2,4-diamino-4-oxobutanoate;C4H7N2O3;NC(CC(N)=O)C([O-])=O;water;13,03;;0,53;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+548;glycylglycylglycine (anionic, in water);2-[[2-[(2-aminoacetyl)amino]acetyl]amino]acetate;C6H10N3O4;O=C([O-])CNC(CNC(CN)=O)=O;water;12,26;;0,63;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+533;phenylalanine (anionic, in water);2-amino-3-phenylpropanoate;C9H10NO2;NC(CC1=CC=CC=C1)C([O-])=O;water;14,12;;0,53;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+659;1-methyl-imidazole (in water);;;;water;9,91;;0,55;***;"Org. Biomol. Chem. 2010, 8, 1929-1935
+https://dx.doi.org/10.1039/c000965b";0
+447;4-methoxypyridine (in H2O);4-Methoxypyridine;C6H7NO;COC1=CC=NC=C1;water;11,44;;0,68;***;"Chem. Eur. J. 2007, 13, 336-345
+https://dx.doi.org/10.1002/chem.200600941";0
+546;gamma-aminobutyric acid (anionic, in water);4-aminobutanoate;C4H8NO2;O=C([O-])CCCN;water;13,55;;0,56;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+487;piperidine (in water);;C5H11N;[H]N1CCCCC1;water;18,13;;0,44;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+531;valine (anionic, in water);2-amino-3-methylbutanoate;C5H10NO2;NC(C(C)C)C([O-])=O;water;13,65;;0,57;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+441;4-chloropyridine (in H2O);4-CHLOROPYRIDINE;C5H4ClN;ClC1=CC=NC=C1;water;10,50;;0,73;*;"Chem. Eur. J. 2007, 13, 336-345
+https://dx.doi.org/10.1002/chem.200600941";0
+504;diethanolamine (in water);2,2'-azanediylbis(ethan-1-ol);C4H11NO2;OCCNCCO;water;13,00;;0,61;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+535;serine (anionic, in water);2-amino-3-hydroxypropanoate;C3H6NO3;NC(CO)C([O-])=O;water;13,16;;0,55;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+541;aspartate (dianionic, in water);2-aminobutanedioate;C4H5NO4;NC(CC([O-])=O)C([O-])=O;water;13,81;;0,53;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-2
+480;methylamine (in water);methanamine;CH5N;[H]N(C)[H];water;13,85;;0,53;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+490;perhydroazepine (in water);azepane;C6H13N;[H]N1CCCCCC1;water;18,29;;0,46;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+500;p-toluidine (in water);4-methylaniline;C7H9N;NC1=CC=C(C)C=C1;water;13,00;;0,79;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+530;alanine (anionic, in water);2-aminopropanoate;C3H6NO2;NC(C)C([O-])=O;water;13,01;;0,58;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+508;1,3-diaminopropane (in water);propane-1,3-diamine;C3H10N2;NCCCN;water;14,02;;0,54;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+542;glutamate (dianionic, in water);2-aminopentanedioate;C5H7NO4;NC(CCC([O-])=O)C([O-])=O;water;13,96;;0,54;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-2
+545;beta-alanine (anionic, in water);3-aminopropanoate;C3H6NO2;NCCC([O-])=O;water;13,26;;0,58;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+534;proline (anionic, in water);pyrrolidine-2-carboxylate;C5H8NO2;O=C([O-])C1NCCC1;water;18,08;;0,5;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+486;pyrrolidine (in water);;C4H9N;[H]N1CCCC1;water;17,21;;0,49;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+495;allylamine (in water);prop-2-en-1-amine;C3H7N;NCC=C;water;13,21;;0,54;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+539;arginine (betaine, in water);2-amino-5-(diaminomethylideneazaniumyl)pentanoate;C6H14N4O2;NC(CCCNC(N)=[NH2+])C([O-])=O;water;12,96;;0,57;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+443;pyridine (in H2O);Pyridine;C5H5N;N1=CC=CC=C1;water;11,05;;0,73;***;"Chem. Eur. J. 2007, 13, 336-345
+https://dx.doi.org/10.1002/chem.200600941";0
+481;ethylamine (in water);ethanamine;C2H7N;[H]N(CC)[H];water;12,87;;0,58;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+485;diethylamine (in water);;C4H11N;[H]N(CC)CC;water;14,68;;0,53;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+877;guanosine anion (in water);;;;water;12,09;;0,52;***;"Chem. Eur. J. 2012, 18, 127-137
+https://dx.doi.org/10.1002/chem.201102411";0
+105;hydroxylamine (in water);hydroxylamine;H3NO;NO;water;11,41;;0,55;***;"J. Am. Chem. Soc. 2003, 125, 286-295
+https://dx.doi.org/10.1021/ja021010y";0
+540;histidine (anionic, in water);;C6H8N3O2;NC(CC1=CNC=N1)C([O-])=O;water;13,83;;0,54;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+544;methionine (anionic, in water);2-amino-4-methylsulfanylbutanoate;C5H10NO2S;NC(CCSC)C([O-])=O;water;13,16;;0,58;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+879;thymine anion (in water);;;;water;11,17;;0,51;***;"Chem. Eur. J. 2012, 18, 127-137
+https://dx.doi.org/10.1002/chem.201102411";0
+104;semicarbazide (in water);Aminourea;CH5N3O;NC(NN)=O;water;11,05;;0,52;***;"J. Am. Chem. Soc. 2003, 125, 286-295
+https://dx.doi.org/10.1021/ja021010y";0
+725;4-pyridone anion (in water);;;;water;14,76;;0,48;***;"J. Am. Chem. Soc. 2010, 132, 15380-15389
+https://dx.doi.org/10.1021/ja106962u";0
+452;4-(dimethylamino)pyridine (in H2O);N,N-Dimethylpyridin-4-amine;C7H10N2;CN(C1=CC=NC=C1)C;water;13,19;;0,56;***;"Chem. Eur. J. 2007, 13, 336-345
+https://dx.doi.org/10.1002/chem.200600941";0
+722;2-pyridone anion (in water);;;;water;12,47;;0,52;***;"J. Am. Chem. Soc. 2010, 132, 15380-15389
+https://dx.doi.org/10.1021/ja106962u";0
+489;piperazine (in water);;C4H10N2;[H]N1CCNCC1;water;17,22;;0,5;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+547;glycylglycine (anionic, in water);2-[(2-aminoacetyl)amino]acetate;C4H7N2O3;O=C([O-])CNC(CN)=O;water;12,91;;0,59;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+874;adenine anion (in water);;;;water;10,93;;0,62;***;"Chem. Eur. J. 2012, 18, 127-137
+https://dx.doi.org/10.1002/chem.201102411";0
+445;4-methylpyridine (in H2O);4-Methylpyridine;C6H7N;CC1=CC=NC=C1;water;11,10;;0,75;***;"Chem. Eur. J. 2007, 13, 336-345
+https://dx.doi.org/10.1002/chem.200600941";0
+494;propargylamine (in water);prop-2-yn-1-amine;C3H5N;NCC#C;water;12,29;;0,59;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+529;glycine (anionic, in water);2-aminoacetate;C2H4NO2;NCC([O-])=O;water;13,51;;0,58;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-1
+871;benzotriazole anion (in water);;;;water;11,52;;0,67;***;"Chem. Eur. J. 2012, 18, 127-137
+https://dx.doi.org/10.1002/chem.201102411";0
+657;imidazole (in water);;;;water;9,63;;0,57;***;"Org. Biomol. Chem. 2010, 8, 1929-1935
+https://dx.doi.org/10.1039/c000965b";0
+491;glycinenitrile (in water);;;;water;10,80;;0,61;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+1265;2-phenylethylamine (in water);2-phenylethanamine;C8H11N;NCCC1=CC=CC=C1;water;13,40;;0,57;***;"ChemPlusChem 2015, 80, 1673-1679
+https://dx.doi.org/10.1002/cplu.201500246";0
+543;cysteine (dianionic, in water, S-nucleophile!);2-amino-3-sulfidopropanoate;C3H5NO2S;NC(C[S-])C([O-])=O;water;23,43;;0,42;***;"Org. Biomol. Chem. 2007, 5, 3814-3820
+https://dx.doi.org/10.1039/b713778h";-2
+964;hydrazine (in water);;;;water;13,46;;0,57;***;"J. Org. Chem. 2012, 77, 8142-8155
+https://dx.doi.org/10.1021/jo301497g";0
+876;9-methyl guanine anion (in water);;;;water;10,77;;0,65;***;"Chem. Eur. J. 2012, 18, 127-137
+https://dx.doi.org/10.1002/chem.201102411";0
+507;glycineamide (in water);2-aminoacetamide;C2H6N2O;NCC(N)=O;water;12,29;;0,58;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+869;4-nitro-imidazole anion (in water);;;;water;11,37;;0,53;***;"Chem. Eur. J. 2012, 18, 127-137
+https://dx.doi.org/10.1002/chem.201102411";0
+870;2-formyl-imidazole anion (in water);;;;water;11,07;;0,5;***;"Chem. Eur. J. 2012, 18, 127-137
+https://dx.doi.org/10.1002/chem.201102411";0
+965;methylhydrazine (in water);;;;water;17,23;;0,45;***;"J. Org. Chem. 2012, 77, 8142-8155
+https://dx.doi.org/10.1021/jo301497g";0
+505;N-methyl-glycinenitrile (in water);2-(methylamino)acetonitrile;C3H6N2;CNCC#N;water;13,50;;0,59;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+488;morpholine (in water);;C4H9NO;[H]N1CCOCC1;water;15,62;;0,54;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+492;ethanolamine (in water);2-aminoethan-1-ol;C2H7NO;OCCN;water;12,61;;0,58;***;"J. Org. Chem. 2007, 72, 3679-3688
+https://dx.doi.org/10.1021/jo062586z";0
+872;purine anion (in water);;;;water;11,00;;0,54;***;"Chem. Eur. J. 2012, 18, 127-137
+https://dx.doi.org/10.1002/chem.201102411";0
+875;guanine anion (in water);;;;water;11,63;;0,59;***;"Chem. Eur. J. 2012, 18, 127-137
+https://dx.doi.org/10.1002/chem.201102411";0
+878;uracil anion (in water);;;;water;10,75;;0,53;***;"Chem. Eur. J. 2012, 18, 127-137
+https://dx.doi.org/10.1002/chem.201102411";0
