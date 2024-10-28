@@ -15,3 +15,6 @@
 /current_molecule.png
 .bash_history
 /.cache
+test.py
+.bashrc
+.bash_logout
