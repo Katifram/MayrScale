@@ -73,11 +73,8 @@ class CalculationWindow:
         # Build the molecule using GPU-enabled settings
         mol = gto.M(atom=atom, basis='def2-tzvpp', charge=self.charge)
 
-
-
         # Perform SCF calculation using GPU-accelerated SCF
         mf = gpu_scf.RHF(mol)
-
 
         mol_opt = optimize(mf, maxsteps=100)
         mf = gpu_scf.RHF(mol_opt)
@@ -88,10 +85,6 @@ class CalculationWindow:
         rdm1_cpu = mf.make_rdm1().get()  # Use .get() to convert CuPy to NumPy  # Convert to a NumPy array on CPU
 
         cube_filename = "mol.cube"
-
-
-
-
 
         cubegen.density(mol, cube_filename, rdm1_cpu)
         draw_isosurface(cube_filename)
