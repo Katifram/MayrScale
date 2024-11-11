@@ -2,6 +2,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+from matplotlib import cm
 
 from skimage import measure
 
@@ -63,7 +64,11 @@ def parse_cube(filename):
 def draw_isosurface(filename):
     cube = parse_cube(filename)
 
-    vert, faces, norm, values= measure.marching_cubes(cube['data'], 0.07, spacing=(0.3,0.3,0.3))
+    vert, faces, norm, values= measure.marching_cubes(cube['data'], 0.3, spacing=(0.3,0.3,0.3))
+
+    print(cube['data'])
+
+
 
         
     # Set up a 3D plot
@@ -71,15 +76,29 @@ def draw_isosurface(filename):
     ax = fig.add_subplot(111, projection='3d')
 
     # Create the 3D mesh from vertices and faces
-    mesh = Poly3DCollection(vert[faces], alpha=0.7, edgecolor='none')
+    mesh = Poly3DCollection(vert[faces], alpha=0.7, edgecolor='k', linewidth=0.1)
     mesh.set_facecolor([0.5, 0.5, 1, 0.1])  # Set color and transparency
 
     ax.add_collection3d(mesh)
+
+    # Plot atoms with correct positions relative to the origin
+    atom_coords = cube['atom_coords'] * 1.889725988578923203102406997093
+    atom_numbers = cube['atom_numbers']
+    colors = cm.get_cmap("viridis", len(set(atom_numbers)))  # Color map for atom types
+
+    
+
+    # Plot atoms and labels
+    for i, (atom_num, coord) in enumerate(zip(atom_numbers, atom_coords)):
+        ax.scatter(*coord, color=colors(i), s=100, label=f'Atom {atom_num}')
+        ax.text(*coord, f'{atom_num}', color='black', fontsize=12, ha='center')  # Label with atomic number
 
     # Set plot limits based on the shape of the cube data
     ax.set_xlim(0, cube['data'].shape[0] * 0.3)
     ax.set_ylim(0, cube['data'].shape[1] * 0.3)
     ax.set_zlim(0, cube['data'].shape[2] * 0.3)
+
+    
 
     # Set axis labels
     ax.set_xlabel("X")
