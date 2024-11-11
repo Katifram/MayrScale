@@ -40,6 +40,11 @@ class MoleculeViewer:
                              command=lambda: self.switch_file('data/O_Nucleophiles/Nucleophile.csv'))
         o_button.pack(side='top', padx=20, pady=5)
 
+        # New button for "My_Nucleophiles"
+        my_n_button = tk.Button(root, text="My Molecules",
+                                command=lambda: self.switch_file('data/My_Molecules/Nucleophile.csv'))
+        my_n_button.pack(side='top', padx=20, pady=5)
+
         # Previous and next buttons
         prev_button = tk.Button(root, text="Vorheriges Molekül", command=self.previous_molecule)
         prev_button.pack(side='left', padx=20)
