@@ -1,49 +1,49 @@
-﻿ID;Name;IUPAC;Sum Formula;Smiles;Solvent;N Params;E Params;sN Params;Quality;Reference;Structure
+﻿ID;Name;IUPAC;Sum Formula;Smiles;Solvent;N Params;E Params;sN Params;Quality;Reference;charge
 101;H2O (in water);oxidane;H2O;O;water;5,2;;0,89;***;"J. Am. Chem. Soc. 2004, 126, 5174-5181
-https://dx.doi.org/10.1021/ja031828z";
+https://dx.doi.org/10.1021/ja031828z";0
 103;OH- (in water);hydroxide;HO;[OH-];water;10,47;;0,61;***;"J. Am. Chem. Soc. 2003, 125, 286-295
-https://dx.doi.org/10.1021/ja021010y";
+https://dx.doi.org/10.1021/ja021010y";-1
 107;2,2,2-trifluoroethanolate (in water);2,2,2-trifluoroethanolate;C2H2F3O;[O-]CC(F)(F)F;water;12,66;;0,59;***;"J. Am. Chem. Soc. 2003, 125, 286-295
-https://dx.doi.org/10.1021/ja021010y";
+https://dx.doi.org/10.1021/ja021010y";-1
 110;HOO- (in water);hydroperoxide anion;HO2;O[O-];water;15,4;;0,55;***;"J. Am. Chem. Soc. 2003, 125, 286-295
-https://dx.doi.org/10.1021/ja021010y";
+https://dx.doi.org/10.1021/ja021010y";-1
 1382;2-phenylperoxyacetate (in H2O);2-phenylethaneperoxoate;C8H7O3;[O-]OC(CC1=CC=CC=C1)=O;water;15,63;;0,56;***;"Angew. Chem. Int. Ed. 2017, 56, 13279-13282
-https://dx.doi.org/10.1002/anie.201707086";
+https://dx.doi.org/10.1002/anie.201707086";-1
 1426;hypobromite (in water);hypobromite;BrO;Br[O-];water;16,69;;0,46;***;"Org. Lett. 2018, 20, 2816-2820
-https://dx.doi.org/10.1021/acs.orglett.8b00645";
+https://dx.doi.org/10.1021/acs.orglett.8b00645";-1
 1384;magnesium 2-carboperoxybenzoate (in H2O);magnesium monoperoxyphthalate;C8H4O5;O=C(O[O-])C1=CC=CC=C1C([O-])=O;water;18,43;;0,46;***;"Angew. Chem. Int. Ed. 2017, 56, 13279-13282
-https://dx.doi.org/10.1002/anie.201707086";
+https://dx.doi.org/10.1002/anie.201707086";-2
 1380;cumene peroxy anion (in H2O);;C9H11O2;[O-]OC(C)(C)C1=CC=CC=C1;water;13,92;;0,61;***;"Angew. Chem. Int. Ed. 2017, 56, 13279-13282
-https://dx.doi.org/10.1002/anie.201707086";
+https://dx.doi.org/10.1002/anie.201707086";-1
 1389;3-chloro-4-methoxyperoxybenzoate (in H2O);;C8H6ClO4;O=C(O[O-])C1=CC(Cl)=C(OC)C=C1;water;18,56;;0,48;***;"Angew. Chem. Int. Ed. 2017, 56, 13279-13282
-https://dx.doi.org/10.1002/anie.201707086";
+https://dx.doi.org/10.1002/anie.201707086";-1
 1386;4-fluoroperoxybenzoate (in H2O);;C7H4FO3;O=C(O[O-])C1=CC=C(F)C=C1;water;17,99;;0,47;***;"Angew. Chem. Int. Ed. 2017, 56, 13279-13282
-https://dx.doi.org/10.1002/anie.201707086";
+https://dx.doi.org/10.1002/anie.201707086";-1
 1388;4-methoxyperoxybenzoate (in H2O);;C8H7O4;O=C(O[O-])C1=CC=C(OC)C=C1;water;17,84;;0,46;***;"Angew. Chem. Int. Ed. 2017, 56, 13279-13282
-https://dx.doi.org/10.1002/anie.201707086";
+https://dx.doi.org/10.1002/anie.201707086";-1
 1390;peroxybenzoate (in H2O);benzenecarboperoxoate;C7H5O3;O=C(O[O-])C1=CC=CC=C1;water;18,57;;0,43;***;"Angew. Chem. Int. Ed. 2017, 56, 13279-13282
-https://dx.doi.org/10.1002/anie.201707086";
+https://dx.doi.org/10.1002/anie.201707086";-1
 1379;t-butylperoxy anion (in H2O);2-methyl-2-oxidooxypropane;C4H9O2;[O-]OC(C)(C)C;water;14,29;;0,51;***;"Angew. Chem. Int. Ed. 2017, 56, 13279-13282
-https://dx.doi.org/10.1002/anie.201707086";
+https://dx.doi.org/10.1002/anie.201707086";-1
 1387;4-nitroperoxybenzoate (in H2O);;C7H4NO5;O=C(O[O-])C1=CC=C([N+]([O-])=O)C=C1;water;17,43;;0,5;***;"Angew. Chem. Int. Ed. 2017, 56, 13279-13282
-https://dx.doi.org/10.1002/anie.201707086";
+https://dx.doi.org/10.1002/anie.201707086";-1
 1381;phthalimidoperoxyhexanoate (in H2O);6-(1,3-dioxoisoindolin-2-yl)peroxyhexanoate;C14H20NO5;O=C(O[O-])CCCCCN1C(C(C=CC=C2)=C2C1=O)=O;water;16,02;;0,54;***;"Angew. Chem. Int. Ed. 2017, 56, 13279-13282
-https://dx.doi.org/10.1002/anie.201707086";
+https://dx.doi.org/10.1002/anie.201707086";-1
 1446;beta-piperidinium-peroxypropionate;3-(piperidin-1-yl)propaneperoxoic acid, 3-(piperidin-1-ylium)propaneperoxolate;;[O-]OC(CC[NH+]1CCCCC1)=O;water;13,94;;0,62;***;"Eur. J. Org. Chem. 2018, , 6010-6017
-https://dx.doi.org/10.1002/ejoc.201801158";
+https://dx.doi.org/10.1002/ejoc.201801158";0
 1383;3,5-dichloroperoxybenzoate (in H2O);;C7H3Cl2O3;O=C(O[O-])C1=CC(Cl)=CC(Cl)=C1;water;17,93;;0,5;***;"Angew. Chem. Int. Ed. 2017, 56, 13279-13282
-https://dx.doi.org/10.1002/anie.201707086";
+https://dx.doi.org/10.1002/anie.201707086";-1
 1385;3-chloroperoxybenzoate (in H2O);3-chlorobenzoperoxoate;C7H4ClO3;O=C(O[O-])C1=CC(Cl)=CC=C1;water;18,19;;0,47;***;"Angew. Chem. Int. Ed. 2017, 56, 13279-13282
-https://dx.doi.org/10.1002/anie.201707086";
+https://dx.doi.org/10.1002/anie.201707086";-1
 1448;peroxy-GABA;4-aminobutaneperoxoic acid, 4-ammoniumperoxybutanoate;;[O-]OC(CCC[NH3+])=O;water;14,33;;0,57;***;"Eur. J. Org. Chem. 2018, , 6010-6017
-https://dx.doi.org/10.1002/ejoc.201801158";
+https://dx.doi.org/10.1002/ejoc.201801158";0
 1428;peroxomonosulfate (in water);oxido sulfate;O5S;[O-]OS(=O)([O-])=O;water;14,41;;0,6;***;"Org. Lett. 2018, 20, 2816-2820
-https://dx.doi.org/10.1021/acs.orglett.8b00645";
+https://dx.doi.org/10.1021/acs.orglett.8b00645";-2
 1427;bromite (in water);;BrO2;[O-]Br=O;water;12,75;;0,59;***;"Org. Lett. 2018, 20, 2816-2820
-https://dx.doi.org/10.1021/acs.orglett.8b00645";
+https://dx.doi.org/10.1021/acs.orglett.8b00645";-1
 1425;hypochlorite (in water);Hypochlorite;ClO;Cl[O-];water;14,5;;0,58;***;"Org. Lett. 2018, 20, 2816-2820
-https://dx.doi.org/10.1021/acs.orglett.8b00645";
+https://dx.doi.org/10.1021/acs.orglett.8b00645";-1
 1447;peroxy-beta-alanate;3-aminopropaneperoxoic acid, 3-ammoniumperoxypropanoate;;[O-]OC(CC[NH3+])=O;water;14,07;;0,56;***;"Eur. J. Org. Chem. 2018, , 6010-6017
-https://dx.doi.org/10.1002/ejoc.201801158";
+https://dx.doi.org/10.1002/ejoc.201801158";0
 1513;p-methylphenolate (in H2O);potassium 4-methylphenolate;C7H7KO;[O-]C1=CC=C(C)C=C1;water;14,3;;0,55;***;"J. Org. Chem. 2019, 84, 8837-8858
-https://dx.doi.org/10.1021/acs.joc.9b01485";
+https://dx.doi.org/10.1021/acs.joc.9b01485";-1
