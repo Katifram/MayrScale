@@ -8,6 +8,7 @@ import numpy as np
 import pyscf
 from pyscf import gto
 from pyscf.tools import cubegen
+from pyscf.geomopt.geometric_solver import optimize
 
 from gpu4pyscf import scf as gpu_scf
 from gpu4pyscf.dft import rks, numint, gen_grid
@@ -15,6 +16,7 @@ from gpu4pyscf.dft import rks, numint, gen_grid
 from utils import parse_cube
 from utils import draw_isosurface
 
+from cube_tools import cube
 
 
 class CalculationWindow:
@@ -71,17 +73,30 @@ class CalculationWindow:
         # Build the molecule using GPU-enabled settings
         mol = gto.M(atom=atom, basis='def2-tzvpp', charge=self.charge)
 
+
+
         # Perform SCF calculation using GPU-accelerated SCF
         mf = gpu_scf.RHF(mol)
-        
+
+
+        mol_opt = optimize(mf, maxsteps=100)
+        mf = gpu_scf.RHF(mol_opt)
+
         mf.kernel()
 
         # Convert GPU-accelerated density matrix to CPU-compatible format
         rdm1_cpu = mf.make_rdm1().get()  # Use .get() to convert CuPy to NumPy  # Convert to a NumPy array on CPU
 
         cube_filename = "mol.cube"
+
+
+
+
+
         cubegen.density(mol, cube_filename, rdm1_cpu)
         draw_isosurface(cube_filename)
+
+        
 
         
 
