@@ -40,3 +40,9 @@ and
  ```
 
 To test if everything is setup correctly you can run SetupTest.py which calculates the Eigenenergy of water.
+
+Finally to install all required libraries use
+
+```powershell
+pip install -r requirements.txt
+ ```
