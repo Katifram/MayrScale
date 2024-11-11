@@ -20,12 +20,12 @@ Install Windows Subsystem for Linux
  ```
  Install Ubuntu
 
- Follow cuda installation for Ubuntu:
- https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=24.04&target_type=deb_local
+ Follow [cuda installation for Ubuntu](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=24.04&target_type=deb_local):
+ 
 
 
-Right now the program uses a Tkinter GUI, for this to work follow:
-https://aaroalhainen.medium.com/working-with-guis-in-wsl2-790ed1653279
+Right now the program uses a Tkinter GUI, for this to work follow: [GUI in wsl](https://aaroalhainen.medium.com/working-with-guis-in-wsl2-790ed1653279)
+
 
 The author used an anaconda environment and recommends to do so, after creating a conda env use
 ```powershell
