@@ -1,6 +1,6 @@
 # MayrScale
 This program was written to read Molecules including their Mayr Nucleophilicity from the Database and calculate Quantum Chemical descriptors and .cube files with GPU accelerated pyscf (gpu4pyscf library).
-Currently the electrostatic potential (80x80x80 cube file) is calculated. 
+Currently, only the electrostatic potential (80x80x80 cube file) is calculated. 
 Finally the program should be able to:
    -calculate Quantum chemical descriptors for Mayr scale
    -use descriptors to regress Mayr's Nucleophilicity
