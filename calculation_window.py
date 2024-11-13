@@ -40,7 +40,7 @@ class CalculationWindow:
         sn_params_label = tk.Label(root, text=f"sN Params: {sn_params}", font=('Arial', 12))
         sn_params_label.pack(pady=5)
 
-        # Add buttons or fields for calculation logic here
+        # Start calculation from calculation button
         calc_button = tk.Button(root, text="Start Calculation", command=self.start_calculation)
         calc_button.pack(pady=10)
 
@@ -76,6 +76,7 @@ class CalculationWindow:
         # Perform SCF calculation using GPU-accelerated SCF
         mf = gpu_scf.RHF(mol)
 
+        # optimize geometry
         mol_opt = optimize(mf, maxsteps=100)
         mf = gpu_scf.RHF(mol_opt)
 
@@ -86,6 +87,7 @@ class CalculationWindow:
 
         cube_filename = "mol.cube"
 
+        
         cubegen.density(mol, cube_filename, rdm1_cpu)
         draw_isosurface(cube_filename)
 

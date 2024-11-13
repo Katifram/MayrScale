@@ -61,14 +61,12 @@ def parse_cube(filename):
         return results
     
 
-def draw_isosurface(filename):
+def draw_isosurface(filename, iso_value):
     cube = parse_cube(filename)
 
-    vert, faces, norm, values= measure.marching_cubes(cube['data'], 0.3, spacing=(0.3,0.3,0.3))
+    vert, faces, norm, values= measure.marching_cubes(cube['data'], iso_value, spacing=(cube['incx'],cube['incy'],cube['incz']))
 
     print(cube['data'])
-
-
 
         
     # Set up a 3D plot
@@ -76,13 +74,13 @@ def draw_isosurface(filename):
     ax = fig.add_subplot(111, projection='3d')
 
     # Create the 3D mesh from vertices and faces
-    mesh = Poly3DCollection(vert[faces], alpha=0.7, edgecolor='k', linewidth=0.1)
-    mesh.set_facecolor([0.5, 0.5, 1, 0.1])  # Set color and transparency
+    mesh = Poly3DCollection(vert[faces], alpha=0.3, edgecolor='k', linewidth=0.1)
+    mesh.set_facecolor([0.5, 0.5, 1, 0.9])  # Set color and transparency
 
     ax.add_collection3d(mesh)
 
     # Plot atoms with correct positions relative to the origin
-    atom_coords = cube['atom_coords'] * 1.889725988578923203102406997093
+    atom_coords = cube['atom_coords'] - np.array([cube['minx'], cube['miny'], cube['minz']])
     atom_numbers = cube['atom_numbers']
     colors = cm.get_cmap("viridis", len(set(atom_numbers)))  # Color map for atom types
 
@@ -94,16 +92,16 @@ def draw_isosurface(filename):
         ax.text(*coord, f'{atom_num}', color='black', fontsize=12, ha='center')  # Label with atomic number
 
     # Set plot limits based on the shape of the cube data
-    ax.set_xlim(0, cube['data'].shape[0] * 0.3)
-    ax.set_ylim(0, cube['data'].shape[1] * 0.3)
-    ax.set_zlim(0, cube['data'].shape[2] * 0.3)
+    ax.set_xlim(0, cube['data'].shape[0] * cube['incx'])
+    ax.set_ylim(0, cube['data'].shape[1] * cube['incy'])
+    ax.set_zlim(0, cube['data'].shape[2] * cube['incz'])
 
     
 
     # Set axis labels
-    ax.set_xlabel("X")
-    ax.set_ylabel("Y")
-    ax.set_zlabel("Z")
+    ax.set_xlabel("X / bohr")
+    ax.set_ylabel("Y / bohr")
+    ax.set_zlabel("Z / bohr")
 
     # Show the plot
     plt.show()
