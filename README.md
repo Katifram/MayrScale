@@ -46,3 +46,12 @@ Finally to install all required libraries use
 ```powershell
 pip install -r requirements.txt
  ```
+
+
+## Calculation
+
+To run the program, run main.py and the molecule viewer should appear
+
+in the molecule viewer choose which nucleophile you want to calculate (N, O or C-Nucleophile) and switch between molecules using the buttons on the bottom. Pressing calculate, opens a calculation window where for now ther are no option but to press calculate again.
+
+If calculation is started, geometry optimization and ESP isosurface are calculated

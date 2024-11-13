@@ -61,12 +61,11 @@ def parse_cube(filename):
         return results
     
 
-def draw_isosurface(filename, iso_value):
-    cube = parse_cube(filename)
+def draw_isosurface(parsed_cube, iso_value):
 
-    vert, faces, norm, values= measure.marching_cubes(cube['data'], iso_value, spacing=(cube['incx'],cube['incy'],cube['incz']))
+    vert, faces, norm, values= measure.marching_cubes(parsed_cube['data'], iso_value, spacing=(parsed_cube['incx'],parsed_cube['incy'],parsed_cube['incz']))
 
-    print(cube['data'])
+    print(parsed_cube['data'])
 
         
     # Set up a 3D plot
@@ -80,8 +79,8 @@ def draw_isosurface(filename, iso_value):
     ax.add_collection3d(mesh)
 
     # Plot atoms with correct positions relative to the origin
-    atom_coords = cube['atom_coords'] - np.array([cube['minx'], cube['miny'], cube['minz']])
-    atom_numbers = cube['atom_numbers']
+    atom_coords = parsed_cube['atom_coords'] - np.array([parsed_cube['minx'], parsed_cube['miny'], parsed_cube['minz']])
+    atom_numbers = parsed_cube['atom_numbers']
     colors = cm.get_cmap("viridis", len(set(atom_numbers)))  # Color map for atom types
 
     
@@ -92,9 +91,9 @@ def draw_isosurface(filename, iso_value):
         ax.text(*coord, f'{atom_num}', color='black', fontsize=12, ha='center')  # Label with atomic number
 
     # Set plot limits based on the shape of the cube data
-    ax.set_xlim(0, cube['data'].shape[0] * cube['incx'])
-    ax.set_ylim(0, cube['data'].shape[1] * cube['incy'])
-    ax.set_zlim(0, cube['data'].shape[2] * cube['incz'])
+    ax.set_xlim(0, parsed_cube['data'].shape[0] * parsed_cube['incx'])
+    ax.set_ylim(0, parsed_cube['data'].shape[1] * parsed_cube['incy'])
+    ax.set_zlim(0, parsed_cube['data'].shape[2] * parsed_cube['incz'])
 
     
 

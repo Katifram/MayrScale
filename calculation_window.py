@@ -89,7 +89,7 @@ class CalculationWindow:
 
         
         cubegen.density(mol, cube_filename, rdm1_cpu)
-        draw_isosurface(cube_filename)
+        draw_isosurface(cube_filename, iso_value=0.3)
 
         
 
