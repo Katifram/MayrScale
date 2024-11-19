@@ -6,6 +6,8 @@ from matplotlib import cm
 
 from skimage import measure
 
+from scipy.interpolate import RegularGridInterpolator
+
 def parse_cube(filename):
     #from: https://github.com/psi4/psi4numpy/blob/6ed03e715689ec82bf96fbb23c1855fbe7835b90/Tutorials/14_Visualization/vizualize.ipynb
     """ Parses a cube file, returning a dict of the information contained.
@@ -165,7 +167,7 @@ def values_along_direction(parsed_cube, start, direction, num_points):
     # find distance between points from parsed_cube by
     min_array = [parsed_cube['minx'], parsed_cube['miny'], parsed_cube['minz']]
     max_array = [parsed_cube['maxx'], parsed_cube['maxy'], parsed_cube['maxz']]
-    step_size = ray_cube_distance(min_array, max_array, start_point, direction) / num_points
+    step_size = ray_cube_distance(min_array, max_array, start, direction) / num_points
 
     # Generate points along the line at each step_size interval
     line_points = np.array([start + i * step_size * direction for i in range(num_points)])
