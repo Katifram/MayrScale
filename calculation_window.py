@@ -1,19 +1,10 @@
 import os
 import tkinter as tk
-from rdkit import Chem
-from rdkit.Chem import AllChem
+from tkinter import ttk
 
 import numpy as np
 
-import pyscf
-from pyscf import gto
-from pyscf.tools import cubegen
-from pyscf.geomopt.geometric_solver import optimize
-
-from gpu4pyscf import scf as gpu_scf
-from gpu4pyscf.dft import rks, numint, gen_grid
-
-from utils import parse_cube
+from DFT import init_calculation, calc_ESP, calc_LMO, create_xyz_string
 from utils import draw_isosurface
 
 from cube_tools import cube
@@ -25,10 +16,13 @@ class CalculationWindow:
         self.root.title("Calculation Window")
 
         # Create the XYZ file for the molecule
-        self.xyz = self.create_xyz_string(name, smiles)
+        self.xyz = create_xyz_string(name, smiles)
 
         # Store charge as an instance attribute
         self.charge = charge
+
+        # Initial DFT calculation
+        self.mol, self.mf = init_calculation(self.xyz, self.charge)
 
         # Display the molecule's information
         name_label = tk.Label(root, text=f"Name: {name}", font=('Arial', 14))
@@ -40,58 +34,90 @@ class CalculationWindow:
         sn_params_label = tk.Label(root, text=f"sN Params: {sn_params}", font=('Arial', 12))
         sn_params_label.pack(pady=5)
 
-        # Start calculation from calculation button
+        # Dropdown for selecting calculation type
+        self.calc_type = tk.StringVar()
+        calc_dropdown_label = tk.Label(root, text="Calculation Type:", font=('Arial', 12))
+        calc_dropdown_label.pack(pady=5)
+
+        calc_dropdown = ttk.Combobox(root, textvariable=self.calc_type, font=('Arial', 12))
+        calc_dropdown['values'] = ['ESP', 'LMO']
+        calc_dropdown.set('Select Calculation')
+        calc_dropdown.pack(pady=5)
+        calc_dropdown.bind("<<ComboboxSelected>>", self.update_inputs)  # Update inputs on selection
+
+        # Frame to hold dynamic inputs
+        self.dynamic_frame = tk.Frame(root)
+        self.dynamic_frame.pack(pady=10)
+
+        # "iso_value" input (permanent)
+        iso_value_label = tk.Label(root, text="Iso Value:", font=('Arial', 12))
+        iso_value_label.pack(pady=5)
+        self.iso_value = tk.Entry(root)
+        self.iso_value.insert(0, "0.3")  # Default iso value
+        self.iso_value.pack(pady=5)
+
+        # Start calculation button
         calc_button = tk.Button(root, text="Start Calculation", command=self.start_calculation)
         calc_button.pack(pady=10)
 
-    def create_xyz_string(self, name, smiles):  # Add 'self' as the first parameter
-        """Generates a 3D structure and returns it in XYZ format as a string without atom count or molecule name."""
-        
-        mol = Chem.MolFromSmiles(smiles)  # Convert SMILES to RDKit molecule object
-        mol = Chem.AddHs(mol)  # Add hydrogen atoms
+    def update_inputs(self, event=None):
+        # Clear previous inputs
+        for widget in self.dynamic_frame.winfo_children():
+            widget.destroy()
 
-        # Generate 3D coordinates
-        AllChem.EmbedMolecule(mol)
-        AllChem.UFFOptimizeMolecule(mol)
+        calc_type = self.calc_type.get()
 
-        # Prepare XYZ string format without the number of atoms or molecule name
-        conf = mol.GetConformer()  # Get the conformation of the molecule
-        xyz_string = ""
-        for i in range(mol.GetNumAtoms()):
-            atom = mol.GetAtomWithIdx(i)
-            pos = conf.GetAtomPosition(i)
-            # Format each line with increased spacing and align values for a cleaner look
-            xyz_string += f"{atom.GetSymbol():<2}    {pos.x: .10f}    {pos.y: .10f}    {pos.z: .10f}\n"
+        if calc_type == "ESP":
+            # Inputs for ESP
+            esp_label = tk.Label(self.dynamic_frame, text="ESP Grid Spacing:", font=('Arial', 12))
+            esp_label.pack(pady=5)
+            self.esp_spacing = tk.Entry(self.dynamic_frame)
+            self.esp_spacing.pack(pady=5)
 
-        return xyz_string.strip()  # Remove any trailing newline
+        elif calc_type == "LMO":
+            # Inputs for LMO
+            lmo_label = tk.Label(self.dynamic_frame, text="Localization Method:", font=('Arial', 12))
+            lmo_label.pack(pady=5)
+            self.lmo_method = ttk.Combobox(self.dynamic_frame, values=["Boys", "Edmiston-Ruedenberg"])
+            self.lmo_method.set("Select Method")
+            self.lmo_method.pack(pady=5)
 
-    def start_calculation(self):
+            # Add integer input for orbital number
+            lmo_int_label = tk.Label(self.dynamic_frame, text="Orbital Number:", font=('Arial', 12))
+            lmo_int_label.pack(pady=5)
 
-        atom = self.xyz
+            # Create the Entry widget for the orbital number
+            self.lmo_orbital_number = tk.Entry(self.dynamic_frame)
+            self.lmo_orbital_number.pack(pady=5)
 
-        print(atom)
-        # Build the molecule using GPU-enabled settings
-        mol = gto.M(atom=atom, basis='def2-tzvpp', charge=self.charge)
 
-        # Perform SCF calculation using GPU-accelerated SCF
-        mf = gpu_scf.RHF(mol)
-
-        # optimize geometry
-        mol_opt = optimize(mf, maxsteps=100)
-        mf = gpu_scf.RHF(mol_opt)
-
-        mf.kernel()
-
-        # Convert GPU-accelerated density matrix to CPU-compatible format
-        rdm1_cpu = mf.make_rdm1().get()  # Use .get() to convert CuPy to NumPy  # Convert to a NumPy array on CPU
-
+    def start_calculation(self):    
+        calc_type = self.calc_type.get()
         cube_filename = "mol.cube"
 
-        
-        cubegen.density(mol, cube_filename, rdm1_cpu)
-        draw_isosurface(cube_filename, iso_value=0.3)
+        # Get iso_value from the entry widget
+        try:
+            iso_value = float(self.iso_value.get())  # Convert the iso value to float
+        except ValueError:
+            print("Please enter a valid number for the Iso Value.")
+            return  # Stop the calculation if iso_value is invalid
 
-        
+        if calc_type == "ESP":
+            esp_spacing = self.esp_spacing.get()
+            print(f"Running ESP calculation with grid spacing: {esp_spacing}")
+            parsed_cube = calc_ESP(self.mf, self.mol, cube_filename)
 
-        
+            draw_isosurface(parsed_cube, iso_value)
 
+        elif calc_type == "LMO":
+            lmo_method = self.lmo_method.get()
+            print(f"Running LMO calculation using method: {lmo_method}")
+            
+            # Retrieve the orbital number, convert to integer
+            try:
+                orbital_number = int(self.lmo_orbital_number.get())  # Convert string input to integer
+                parsed_cube = calc_LMO(self.mf, self.mol, cube_filename, orbital_number)
+
+                draw_isosurface(parsed_cube, iso_value)
+            except ValueError:
+                print("Please enter a valid integer for the orbital number.")

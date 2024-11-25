@@ -66,9 +66,6 @@ def parse_cube(filename):
 def draw_isosurface(parsed_cube, iso_value):
 
     vert, faces, norm, values= measure.marching_cubes(parsed_cube['data'], iso_value, spacing=(parsed_cube['incx'],parsed_cube['incy'],parsed_cube['incz']))
-
-    print(parsed_cube['data'])
-
         
     # Set up a 3D plot
     fig = plt.figure(figsize=(10, 10))
