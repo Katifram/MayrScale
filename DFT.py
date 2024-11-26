@@ -61,14 +61,22 @@ def calc_ESP(mf, mol, cube_filename):
         return parsed_cube
 
 
-def calc_LMO(mf, mol, cube_filename, orbital_number):
-        mo_coeff_cpu = mf.mo_coeff.get() 
-        # Localize orbitals (Boys method)
+def calc_LMO(mf, mol, cube_filename, orbital_number, method):
+    mo_coeff_cpu = mf.mo_coeff.get()
+
+    # Select the localization method
+    if method == "Boys":
         localizer = lo.Boys(mol, mo_coeff_cpu)
-        localized_mos = localizer.kernel()
+    elif method == "Edmiston-Ruedenberg":
+        localizer = lo.EdmistonRuedenberg(mol, mo_coeff_cpu)
+    else:
+        raise ValueError("Invalid localization method. Choose 'Boys' or 'Edmiston-Ruedenberg'.")
 
-        # Analyze localized orbitals to identify lone pairs
-        cubegen.orbital(mol, cube_filename, localized_mos[:, orbital_number], nx=80)
-        parsed_cube = parse_cube(cube_filename)
+    # Localize orbitals
+    localized_mos = localizer.kernel()
 
-        return parsed_cube
+    # Analyze localized orbitals to identify lone pairs
+    cubegen.orbital(mol, cube_filename, localized_mos[:, orbital_number], nx=80)
+    parsed_cube = parse_cube(cube_filename)
+
+    return parsed_cube

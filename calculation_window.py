@@ -78,16 +78,19 @@ class CalculationWindow:
             # Inputs for LMO
             lmo_label = tk.Label(self.dynamic_frame, text="Localization Method:", font=('Arial', 12))
             lmo_label.pack(pady=5)
+
+            # Set default method to "Boys"
             self.lmo_method = ttk.Combobox(self.dynamic_frame, values=["Boys", "Edmiston-Ruedenberg"])
-            self.lmo_method.set("Select Method")
+            self.lmo_method.set("Boys")
             self.lmo_method.pack(pady=5)
 
             # Add integer input for orbital number
             lmo_int_label = tk.Label(self.dynamic_frame, text="Orbital Number:", font=('Arial', 12))
             lmo_int_label.pack(pady=5)
 
-            # Create the Entry widget for the orbital number
+            # Create the Entry widget for the orbital number with default value 0
             self.lmo_orbital_number = tk.Entry(self.dynamic_frame)
+            self.lmo_orbital_number.insert(0, "0")
             self.lmo_orbital_number.pack(pady=5)
 
 
@@ -116,7 +119,7 @@ class CalculationWindow:
             # Retrieve the orbital number, convert to integer
             try:
                 orbital_number = int(self.lmo_orbital_number.get())  # Convert string input to integer
-                parsed_cube = calc_LMO(self.mf, self.mol, cube_filename, orbital_number)
+                parsed_cube = calc_LMO(self.mf, self.mol, cube_filename, orbital_number, lmo_method)
 
                 draw_isosurface(parsed_cube, iso_value)
             except ValueError:
