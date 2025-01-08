@@ -5,9 +5,8 @@ from pyscf import gto, lo
 
 import pyscf
 from pyscf import gto
+from pyscf import scf
 from pyscf.geomopt.geometric_solver import optimize
-
-from gpu4pyscf import scf as gpu_scf
 
 from rdkit import Chem
 from rdkit.Chem import AllChem
@@ -37,32 +36,31 @@ def init_calculation(xyz, charge):
 
     atom = xyz
 
-    # Build the molecule using GPU-enabled settings
+    # Build the molecule without GPU-specific settings
     mol = gto.M(atom=atom, basis='def2-tzvpp', charge=charge)
 
-    # Perform SCF calculation using GPU-accelerated SCF
-    mf = gpu_scf.RHF(mol)
+    # Perform SCF calculation without GPU acceleration
+    mf = scf.RHF(mol)
 
     # optimize geometry
     mol_opt = optimize(mf, maxsteps=1)
-    mf = gpu_scf.RHF(mol_opt)
+    mf = scf.RHF(mol_opt)
 
     mf.kernel()
 
     return mol, mf
 
 def calc_ESP(mf, mol, cube_filename):
-# Convert GPU-accelerated density matrix to CPU-compatible format
-        rdm1_cpu = mf.make_rdm1().get()  # Use .get() to convert CuPy to NumPy  # Convert to a NumPy array on CPU
+    # No GPU processing, directly use the density matrix on CPU
+    rdm1_cpu = mf.make_rdm1()  # Directly using the density matrix on the CPU
                
-        cubegen.density(mol, cube_filename, rdm1_cpu)
-        parsed_cube = parse_cube(cube_filename)
+    cubegen.density(mol, cube_filename, rdm1_cpu)
+    parsed_cube = parse_cube(cube_filename)
 
-        return parsed_cube
-
+    return parsed_cube
 
 def calc_LMO(mf, mol, cube_filename, orbital_number, method):
-    mo_coeff_cpu = mf.mo_coeff.get()
+    mo_coeff_cpu = mf.mo_coeff
 
     # Select the localization method
     if method == "Boys":
