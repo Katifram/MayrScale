@@ -21,3 +21,4 @@ test.py
 mol.cube
 .lesshst
 /.vscode
+venv/
