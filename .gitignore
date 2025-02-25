@@ -22,3 +22,4 @@ mol.cube
 .lesshst
 /.vscode
 venv/
+data/calculated
